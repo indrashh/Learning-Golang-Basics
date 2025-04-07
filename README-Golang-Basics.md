@@ -12,6 +12,7 @@ Becasuse today is not my first day i write GO file, in the first jurney maybe wi
 
 - Language: Golang
 - Tools: VSCode,Git/GitHub
+- Youtube Programmer Zaman Now(PZN)
 
 ---
 
