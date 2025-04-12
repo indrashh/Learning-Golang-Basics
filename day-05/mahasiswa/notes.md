@@ -1,8 +1,8 @@
-# Day 4 - April 10, 2025
+# Day 5 - April 11, 2025
 
 ## ✅ What I Learned
 
--styling HTML
+-styling HTML at template/index.html
 
 ## ✍️ Example Database
 
