@@ -12,13 +12,90 @@
   <body>
     <div class="container mt-4">
       <h1>Halo, {{ .Name }}!</h1>
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#btnTambah"
+      >
+        Tambahkan
+      </button>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="btnTambah"
+        tabindex="-1"
+        aria-labelledby="btnTambahLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="btnTambahLabel">Tambahkan</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <!-- modal body -->
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="firstName" class="form-label">First Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    aria-describedby="emailHelp"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="lastName" class="form-label">Last Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    aria-describedby="emailHelp"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="handle" class="form-label">Handle</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="handle"
+                    aria-describedby="emailHelp"
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">
+                Save changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">#</th>
+            <th scope="col">No</th>
             <th scope="col">First</th>
             <th scope="col">Last</th>
             <th scope="col">Handle</th>
+            <th scope="col">Opsi</th>
           </tr>
         </thead>
         <tbody>
@@ -28,6 +105,167 @@
             <td>{{ .Nama_user }}</td>
             <td>{{ .Last }}</td>
             <td>{{ .Handle }}</td>
+            <td>
+              <!-- Button trigger edit -->
+              <button
+                type="button"
+                class="btn btn-success"
+                data-bs-toggle="modal"
+                data-bs-target="#btnEdit"
+              >
+                Opsi
+              </button>
+              <!-- Modal edit -->
+              <div
+                class="modal fade"
+                id="btnEdit"
+                tabindex="-1"
+                aria-labelledby="btnEditLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="btnEditLabel">Opsi</h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <!-- modal body -->
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="firstName" class="form-label"
+                            >First Name</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="firstName"
+                            aria-describedby="emailHelp"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="lastName" class="form-label"
+                            >Last Name</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="lastName"
+                            aria-describedby="emailHelp"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="handle" class="form-label">Handle</label>
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="handle"
+                            aria-describedby="emailHelp"
+                          />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Save changes
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Button trigger delete -->
+              <button
+                type="button"
+                class="btn btn-danger"
+                data-bs-toggle="modal"
+                data-bs-target="#btnDelete"
+              >
+                Delete
+              </button>
+              <!-- Modal edit -->
+              <div
+                class="modal fade"
+                id="btnDelete"
+                tabindex="-1"
+                aria-labelledby="btnEditLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="btnEditLabel">Delete</h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <!-- modal body -->
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="firstName" class="form-label"
+                            >First Name</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="firstName"
+                            aria-describedby="emailHelp"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="lastName" class="form-label"
+                            >Last Name</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="lastName"
+                            aria-describedby="emailHelp"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="handle" class="form-label">Handle</label>
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="handle"
+                            aria-describedby="emailHelp"
+                          />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Save changes
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
           </tr>
           {{ end }}
         </tbody>
